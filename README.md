@@ -21,7 +21,7 @@ Changelog:
 How to run:
 ------------
 
-- Use your terminal to navigate to the root of a web server: 
+- Use your terminal to navigate to the root of a your web server. For example: 
 
 ```ruby
 C:\xampp\htdocs
@@ -29,8 +29,12 @@ C:\xampp\htdocs
 
 - Clone application by entering the following command to your terminal:
 
+```ruby
 git clone https://github.com/Miksiii/profiler2017.git
+```
 
 - Access the app by entering following URL to your address bar:
 
+```ruby
 localhost/profiler2017
+```
