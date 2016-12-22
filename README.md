@@ -15,7 +15,7 @@ Changelog:
 - Added JSDoc
 - Services are now changed so they return functions directly 
 - Service logic has been removed from the controllers
-- IIFE is switch to init function  
+- IIFE in dashboard controller is now switched to init function
 
 
 How to run:
