@@ -42,7 +42,6 @@ localhost/profiler2017
 - Use the following predefined user details to login as user: 
 
 ```ruby
-Login as user:
 Email: milan.hakaj@gmail.com
 Password: milan123
 ```
@@ -50,7 +49,6 @@ Password: milan123
 - Use the following predefined user details to login as admin:
 
 ```ruby
-Login as admin: 
 Email: milena.glisic@gmail.com
 Password: admin123
 ``` 
