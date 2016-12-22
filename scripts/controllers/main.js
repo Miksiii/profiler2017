@@ -14,7 +14,6 @@
        */
       $scope.$on('$routeChangeStart', function() {
          $scope.user = Auth.currentlyActiveUser();
-         console.log("dasdada" + $scope.user.email);
       });
 
       /**
@@ -24,7 +23,7 @@
        * @param {String} route - represents specific route engaged with each 
        * nav link (for example: /register, /dashboard, /dashboard/users, etc)
        * 
-       * @return {Boolean}
+       * @return {Boolean} - active or not active
        */
       $scope.isRouteActive = function(route) {
         return route === $location.path();
@@ -32,7 +31,7 @@
 
       /**
        * Checks the form validation and prepares new user to be registered 
-       * by calling the registerUser function from User factory.
+       * by calling registerUser function from User factory.
        * 
        * @param  {Boolean} isValid - the form validation
        */

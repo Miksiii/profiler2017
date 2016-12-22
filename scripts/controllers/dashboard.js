@@ -6,7 +6,7 @@
     controller('DashboardCtrl', function(Auth, User, Role, $scope, $location, $routeParams) {
 
       /**
-       * Returns users array
+       * Returns user array from localStorage
        * 
        * @return {Array} - json list of currently registered users
        */
@@ -15,7 +15,8 @@
       };
 
       /**
-       * Returns array of possible user roles 
+       * Returns array of possible user roles by calling the getUserRoles method
+       * from Role factory
        * 
        * @return {[Array]} - user roles
        */
@@ -24,10 +25,10 @@
       };
 
       /**
-       * Displays specific user by changing the location path to 
-       * match the view user route (dashboard/users/:id)
+       * Displays specific user by changing the location path to match the 'view
+       * user route' (dashboard/users/:id)
        * 
-       * @param  {Object} userToView - User to display 
+       * @param {Object} userToView - User to display 
        */
       $scope.viewUserDetails = function(userToView) {
         $location.path('dashboard/users/' + userToView.id);
@@ -60,7 +61,8 @@
       };
 
       /**
-       * Grabs the 'view user' route parameters (id of the user that needs to be shown)
+       * Grabs the 'view user' route parameters (id of the user that needs to be shown) 
+       * and returns the User with specified id 
        * 
        * @return {Object} - User founded by it's unique id
        */

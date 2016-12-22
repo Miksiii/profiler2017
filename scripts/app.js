@@ -9,6 +9,15 @@
       ])
     .config(function($routeProvider) {
 
+    /**
+     * Makes sure that user without session cannot access dashboard view
+     * 
+     * @param  location
+     * @param  q
+     * @param  Auth      
+     * 
+     * @return deffered
+     */
     var restrictWithoutPermission = function($location, $q, Auth) {
         var deferred = $q.defer();
 
@@ -22,6 +31,15 @@
         return deferred.promise;
     };
 
+    /**
+     * Makes sure that user with started session can't access the login/register view
+     * 
+     * @param  location
+     * @param  q
+     * @param  Auth
+     * 
+     * @return deffered
+     */
     var restrictWithPermission = function($location, $q, Auth) {
       var deferred = $q.defer();
       var user = Auth.currentlyActiveUser();
@@ -42,6 +60,15 @@
       return deferred.promise;
     };
 
+    /**
+     * Makes sure that user can't perform admin related actions
+     * 
+     * @param  location
+     * @param  q
+     * @param  Auth
+     * 
+     * @return deffered
+     */
     var restrictWithoutAdminPermission = function($location, $q, Auth) {
         var deferred = $q.defer();
 

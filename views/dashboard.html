@@ -3,6 +3,6 @@
 <p><b>Firstname:</b> {{user.firstname}} </p>
 <p><b>Lastname:</b> {{user.lastname}}</p></p>
 <p><b>Email:</b> {{user.email}}</p>
-<p><b>Date signed up:</b> {{user.dateRegistered | humanizeDateFormat}}</p>
-<p><b>Date modified:</b> {{user.dateModified === null ? 'Not edited yet' : user.dateModified | humanizeDateFormat(user.dateModified)}}</p>
+<p><b>Date signed up:</b> {{user.dateRegistered | humanizeDateFormat: user.dateRegistered}}</p>
+<p><b>Date modified:</b> {{user.dateModified === null ? 'Not edited yet' : user.dateModified | humanizeDateFormat: user.dateModified}}</p>
 <p><b>Role:</b> {{user.role}}</p>
