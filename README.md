@@ -38,3 +38,21 @@ git clone https://github.com/Miksiii/profiler2017.git
 ```ruby
 localhost/profiler2017
 ```
+
+- Use the following predefined user details to login: 
+
+```ruby
+Login as user:
+Email: milan.hakaj@gmail.com
+Password: milan123
+
+Login as admin: 
+Email: milena.glisic@gmail.com
+Password: admin123
+``` 
+
+- To see the full list of predefined user details check out the following json file:
+
+```ruby
+https://github.com/Miksiii/profiler2017/blob/master/collection/preusers.json
+```
