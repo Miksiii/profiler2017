@@ -1,0 +1,53 @@
+<div class="jumbotron">
+
+  <h1>Login</h1>
+
+  <div class="alert alert-success" ng-if="isReadyToLogin">
+    You have been successfully registered. You may now login.
+  </div>
+
+  <div class="alert alert-danger" ng-if="responseLogin">
+    {{responseLogin}}
+  </div>
+
+  {{isReady}}
+
+  <form ng-submit="loginUser(formLogin.$valid)"
+        novalidate="novalidate"
+        name="formLogin">
+
+    <!-- email -->
+    <div class="form-group"
+         ng-class="{
+          'has-error':!formLogin.email.$valid && (!formLogin.email.$pristine || formLogin.$submitted)
+         }">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" name="email" ng-model="email" required="required">
+      <small class="help-block" ng-show="formLogin.email.$error.required && (!formLogin.$pristine || formLogin.$submitted)">
+        Email is required
+      </small>
+      <small class="help-block" ng-show="formLogin.email.$error.email && (!formLogin.email.$pristine || formLogin.$submitted)">
+        Email has to be a valid email
+      </small>
+    </div>
+
+    <!-- password -->
+    <div class="form-group"
+         ng-class="{
+          'has-error':!formLogin.password.$valid && (!formLogin.password.$pristine || formLogin.$submitted)
+         }">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" ng-model="password" required="required">
+      <small class="help-block" ng-show="formLogin.password.$error.required && (!formLogin.password.$pristine || formLogin.$submitted)">
+        Password is required
+      </small>
+    </div>
+
+    <!-- submit -->
+    <div class="form-group">
+      <button class="btn btn-lg btn-success">Login</span></button>
+    </div>
+
+  </form>
+
+</div>

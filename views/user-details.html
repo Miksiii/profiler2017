@@ -1,0 +1,13 @@
+<a ng-href="#!/dashboard/users">Go Back</a> -
+<a ng-href="#!/dashboard/users/edit/{{userToView.id}}">Edit profile</a>
+
+<h2>My profile</h2>
+
+<p><b>Firstname:</b> {{userToView.firstname}} </p>
+<p><b>Lastname:</b> {{userToView.lastname}}</p></p>
+<p><b>Email:</b> {{userToView.email}}</p>
+<p><b>Date signed up:</b> {{userToView.dateRegistered | humanizeDateFormat}}</p>
+<p><b>Date modified:</b> {{userToView.dateModified === null ? 'Not edited yet' : user.dateModified | humanizeDateFormat}}</p>
+<p><b>Role:</b> {{userToView.role}}</p>
+
+

@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>firstname</th>
+      <th>lastname</th>
+      <th>email</th>
+      <th>registered</th>
+      <th>modified</th>
+      <th>profile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in getUsers()" ng-click="viewUserDetails(user)">
+      <td>{{user.firstname}}</td>
+      <td>{{user.lastname}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.dateRegistered | humanizeDateFormat}}</td>
+      <td>{{user.dateModified === null ? 'Not edited yet' : user.dateModified | humanizeDateFormat}}</td>
+      <td><a ng-click="viewUserDetails(user)">View</a></td>
+    </tr>
+  </tbody>
+</table>

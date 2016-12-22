@@ -1,0 +1,75 @@
+<div class="jumbotron">
+
+  <h1>Register</h1>
+
+  <form ng-submit="registerUser(formRegister.$valid)"
+        novalidate="novalidate"
+        name="formRegister">
+
+    <!-- firstname -->
+    <div class="form-group"
+         ng-class="{
+          'has-error':!formRegister.firstname.$valid && (!formRegister.firstname.$pristine || formRegister.$submitted)
+         }">
+      <label for="firstname">Firstname</label>
+      <input type="text" class="form-control" id="firstname" name="firstname" ng-model="firstname" required="required">
+
+      <small class="help-block"
+             ng-show="formRegister.firstname.$error.required && (!formRegister.firstname.$pristine || formRegister.$submitted)">
+        Firstname is required
+      </small>
+    </div>
+
+    <!-- lastname -->
+    <div class="form-group"
+         ng-class="{
+          'has-error':!formRegister.lastname.$valid && (!formRegister.lastname.$pristine || formRegister.$submitted)
+         }">
+      <label for="lastname">Lastname</label>
+      <input type="text" class="form-control" id="lastname" name="lastname" ng-model="lastname" required="required">
+
+      <small class="help-block"
+             ng-show="formRegister.lastname.$error.required && (!formRegister.lastname.$pristine || formRegister.$submitted)">
+        Lastname is required
+      </small>
+    </div>
+
+    <!-- email -->
+    <div class="form-group"
+         ng-class="{
+          'has-error':!formRegister.email.$valid && (!formRegister.email.$pristine || formRegister.$submitted)
+         }">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" name="email" ng-model="email" required="required">
+
+      <small class="help-block"
+             ng-show="formRegister.email.$error.required && (!formRegister.email.$pristine || formRegister.$submitted)">
+        Email is required
+      </small>
+      <small class="help-block"
+             ng-show="formRegister.email.$error.email && (!formRegister.email.$pristine || formRegister.$submitted)">
+        Please, enter a valid email address.
+      </small>
+    </div>
+
+    <!-- password -->
+    <div class="form-group"
+         ng-class="{
+          'has-error':!formRegister.password.$valid && (!formRegister.password.$pristine || formRegister.$submitted)
+         }">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" ng-model="password" required="required">
+
+      <small class="help-block"
+             ng-show="formRegister.password.$error.required && (!formRegister.password.$pristine || formRegister.$submitted)">
+        Password is required.
+      </small>
+    </div>
+
+    <!-- submit -->
+    <div class="form-group">
+      <button class="btn btn-lg btn-success">Register</span></button>
+    </div>
+  </form>
+
+</div>

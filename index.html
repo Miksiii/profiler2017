@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="profilerApp">
+<head>
+  <title>AngularJS: Profiler App</title>
+  <link rel="stylesheet" type="text/css" href="components/styles/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand">profiler</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="MainCtrl">
+
+          <ul class="nav navbar-nav" ng-if="user === null">
+            <li ng-class="{active:isRouteActive('/')}">
+              <a ng-href="#!/login">Login</a>
+            </li>
+            <li ng-class="{active:isRouteActive('/register')}">
+                <a ng-href="#!/register">Register</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav" ng-if="user !== null && user.role == 'user'">
+            <li ng-class="{active:isRouteActive('/dashboard')}">
+              <a ng-href="#!/dashboard">My profile</a>
+            </li>
+            <li ng-class="{active:isRouteActive('/dashboard/users/edit/{{user.id}}')}">
+              <a ng-href="#!/dashboard/users/edit/{{user.id}}">Edit</a>
+            </li>
+            <li>
+              <a ng-controller="DashboardCtrl" ng-click="logout()">Logout</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav" ng-if="user !== null && user.role == 'admin'">
+            <li ng-class="{active:isRouteActive('/dashboard/users')}">
+              <a ng-href="#!/dashboard/users">List users</a>
+            </li>
+            <li>
+              <a ng-controller="DashboardCtrl" ng-click="logout()">Logout</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div ng-controller="MainCtrl">{{test}}</div>
+  
+  <div class="container">
+    <div ng-view=""></div>
+  </div>
+
+  <!-- Component includes -->
+  <script src="components/scripts/jquery.min.js"></script>
+  <script src="components/scripts/angular.min.js"></script>
+  <script src="components/scripts/angular-route.min.js"></script>
+  <script src="components/scripts/angular-resource.min.js"></script>
+  <!-- component includes ends -->
+
+  <!-- Angular Scripts -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/dashboard.js"></script>
+  <script src="scripts/services/auth.js"></script>
+  <script src="scripts/services/user.js"></script>
+  <script src="scripts/services/role.js"></script>
+  <script src="scripts/filters/datefilter.js"></script>
+  <!-- Angular Scripts ends -->
+
+</body>
+</html>

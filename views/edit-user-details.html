@@ -1,0 +1,88 @@
+<div class="jumbotron">
+
+  <h1>Edit profile</h1>
+
+  <form ng-submit="updateUser(formEditProfile.$valid)"
+        novalidate="novalidate"
+        name="formEditProfile">
+
+    <div class="alert alert-success" ng-if="editResponse">
+      {{editResponse}}
+    </div>
+
+    <!-- firstname -->
+    <div class="form-group"
+         ng-class="{
+          'has-error':!formEditProfile.firstname.$valid && (!formEditProfile.firstname.$pristine || formEditProfile.$submitted)
+         }">
+      <label for="firstname">Firstname</label>
+      <input type="text" class="form-control" id="firstname" name="firstname" ng-model="editableUser.firstname" required="required">
+
+      <small class="help-block"
+             ng-show="formEditProfile.firstname.$error.required && (!formEditProfile.firstname.$pristine || formEditProfile.$submitted)">
+        Firstname is required
+      </small>
+    </div>
+
+    <!-- lastname -->
+    <div class="form-group"
+         ng-class="{
+          'has-error':!formEditProfile.lastname.$valid && (!formEditProfile.lastname.$pristine || formEditProfile.$submitted)
+         }">
+      <label for="lastname">Lastname</label>
+      <input type="text" class="form-control" id="lastname" name="lastname" ng-model="editableUser.lastname" required="required">
+
+      <small class="help-block"
+             ng-show="formEditProfile.lastname.$error.required && (!formEditProfile.lastname.$pristine || formEditProfile.$submitted)">
+        Lastname is required
+      </small>
+    </div>
+
+    <!-- email -->
+    <div class="form-group"
+         ng-class="{
+          'has-error':!formEditProfile.email.$valid && (!formEditProfile.email.$pristine || formEditProfile.$submitted)
+         }">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" name="email" ng-model="editableUser.email" required="required">
+
+      <small class="help-block"
+             ng-show="formEditProfile.email.$error.required && (!formEditProfile.email.$pristine || formEditProfile.$submitted)">
+        Email is required
+      </small>
+      <small class="help-block"
+             ng-show="formEditProfile.email.$error.email && (!formEditProfile.email.$pristine || formEditProfile.$submitted)">
+        Please, enter a valid email address.
+      </small>
+    </div>
+
+    <!-- password -->
+    <div class="form-group"
+         ng-class="{
+          'has-error':!formEditProfile.password.$valid && (!formEditProfile.password.$pristine || formEditProfile.$submitted)
+         }">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" ng-model="editableUser.password" required="required">
+
+      <small class="help-block"
+             ng-show="formEditProfile.password.$error.required && (!formEditProfile.password.$pristine || formEditProfile.$submitted)">
+        Password is required.
+      </small>
+    </div>
+
+    <!-- role, visible only by the admin -->
+    <div class="form-group" ng-if="user.role == 'admin'">
+      <label for="role">Role</label>
+      <select class="form-control" id="role" name="role" ng-model="editableUser.role" required="required">
+        <option ng-repeat="role in getUserRoles()">{{role}}</option>
+      </select>
+    </div>
+
+    <!-- submit -->
+    <div class="form-group">
+      <button class="btn btn-lg btn-success">Edit</span></button>
+    </div>
+
+  </form>
+
+</div>

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1725,
+    "firstname": "milena",
+    "lastname": "glisic",
+    "email": "milena.glisic@gmail.com",
+    "password": "admin123",
+    "dateRegistered": "2016-12-18T16:34:26.199Z",
+    "dateModified": null,
+    "role": "admin"
+  },
+  {
+    "id": 559,
+    "firstname": "milan",
+    "lastname": "hakaj",
+    "email": "milan.hakaj@gmail.com",
+    "password": "milan123",
+    "dateRegistered": "2016-12-18T17:04:05.774Z",
+    "dateModified": null,
+    "role": "user"
+  },
+  {
+    "id": 65,
+    "firstname": "daniel",
+    "lastname": "zlatanovic",
+    "email": "danijel.zlatanovic@gmail.com",
+    "password": "danijel123",
+    "dateRegistered": "2016-12-18T20:35:19.290Z",
+    "dateModified": "2016-12-19T10:27:32.482Z",
+    "role": "user"
+  },
+  {
+    "id": 1058,
+    "firstname": "snezana",
+    "lastname": "stankovic",
+    "email": "sneshka-stankovic@hotmail.com",
+    "password": "sneshka123",
+    "dateRegistered": "2016-12-18T17:13:48.613Z",
+    "dateModified": "2016-12-19T10:58:04.621Z",
+    "role": "user"
+  },
+  {
+    "id": 470,
+    "firstname": "djurdja",
+    "lastname": "peric",
+    "email": "djurdja.peric@gmail.com",
+    "password": "djurdja123",
+    "dateRegistered": "2016-12-18T16:34:16.526Z",
+    "dateModified": "2016-12-19T10:59:53.122Z",
+    "role": "user"
+  }
+]

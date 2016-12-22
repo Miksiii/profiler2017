@@ -1,0 +1,5 @@
+.navbar a, 
+#js-navbar-collapse a, 
+table tr {
+  cursor: pointer;
+}
