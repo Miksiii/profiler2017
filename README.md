@@ -21,7 +21,7 @@ Changelog:
 How to run:
 ------------
 
-- Use your terminal to navigate to the root of a your web server. For example: 
+- Use your terminal to navigate to the root of a your web server. For example XAMPP: 
 
 ```ruby
 C:\xampp\htdocs
