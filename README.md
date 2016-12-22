@@ -1,3 +1,7 @@
+About:
+------------
+The project represents AngularJS application in terms of test-task for a fulltime job at TradeCore company.  
+
 Changelog:
 ------------
 
@@ -12,3 +16,19 @@ Changelog:
 - Services are now changed so they return functions directly 
 - Service logic has been removed from the controllers
 - IIFE is switch to init function  
+
+
+How to run:
+------------
+
+- Use your terminal to navigate to the root of a web server: 
+
+C:\xampp\htdocs
+
+- Clone application by entering the following command to your terminal:
+
+git clone https://github.com/Miksiii/profiler2017.git
+
+- Access the app by entering following URL to your address bar:
+
+localhost/profiler2017
