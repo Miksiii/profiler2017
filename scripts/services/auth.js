@@ -2,6 +2,12 @@
 
   'use strict'
 
+  /**
+   * The factory provides auth related functionality
+   * 
+   * @module profilerApp
+   * @factory Auth
+   */
   angular.module('profilerApp')
     .factory('Auth', function (User, $location) {
 

@@ -2,6 +2,12 @@
 
   'use strict'
 
+  /**
+   * The factory provides user related functionality
+   * 
+   * @module profilerApp
+   * @factory User
+   */
   angular.module('profilerApp')
     .factory('User', function ($http, $location) {
 

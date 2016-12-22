@@ -2,6 +2,12 @@
 
   'use strict';
 
+   /**
+   * Filter that format/filters date format
+   * 
+   * @module profilerApp
+   * @filter humanizeDateFormat
+   */
   angular.module('profilerApp')
     .filter('humanizeDateFormat',['$filter',  function($filter) {
 

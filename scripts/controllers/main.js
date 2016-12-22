@@ -2,6 +2,16 @@
 
   'use strict';
 
+  /**
+   * Controller responsible for user actions before starting it's session (before login)
+   * 
+   * Views:
+   * /login
+   * /registers
+   * 
+   * @module profilerApp
+   * @controller MainController
+   */
   angular.module('profilerApp').
     controller('MainCtrl', function($scope, $location, User, Auth, Role) {
 

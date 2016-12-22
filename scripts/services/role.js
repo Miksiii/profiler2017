@@ -2,6 +2,12 @@
 
   'use strict'
 
+  /**
+   * The factory provides possible roles to the user
+   * 
+   * @module profilerApp
+   * @factory Role
+   */
   angular.module('profilerApp')
     .factory('Role', function () {
 

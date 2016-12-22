@@ -2,6 +2,11 @@
 
   'use strict';
 
+  /**
+   * Main application module
+   * 
+   * @module profilerApp
+   */
   angular.
     module('profilerApp', [
       'ngRoute', 

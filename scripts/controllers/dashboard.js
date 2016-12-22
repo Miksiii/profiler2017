@@ -2,6 +2,17 @@
 
   'use strict';
 
+  /**
+   * Controller responsible for user actions after starting it's session (after login)
+   * 
+   * Views:
+   * /dashboard
+   * /dashboard/users
+   * /dashboard/users/edit/:id
+   * 
+   * @module profilerApp
+   * @controller MainController
+   */
   angular.module('profilerApp').
     controller('DashboardCtrl', function(Auth, User, Role, $scope, $location, $routeParams) {
 
