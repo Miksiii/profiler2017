@@ -1,16 +1,14 @@
-TradeCore AngularJS: ProfilerApp
+Changelog:
 ------------
 
-Installation 
-
-The application is running on localhost (xampp port 80). To get and start the app: 
-
-* Use your terminal to navigate to the root of a web server: 
-C:\xampp\htdocs
-
-* Clone application by entering the following command to your terminal:
-git clone https://github.com/Miksiii/profiler2017.git
-
-* Access the app by entering following URL to your address bar:
-localhost/profiler2017
-
+- Project is now scaffolded manually without using Angular Generators
+- Bowerrc has been removed
+- Added time for update/signed up date
+- Lint errors are now fixed 
+- Google analytics has been removed
+- Both, admins and users are now displaying in the users list in dashboard
+- Added unique localStorage prefix
+- Added JSDoc
+- Services are now changed so they return functions directly 
+- Service logic has been removed from the controllers
+- IIFE is switch to init function  
