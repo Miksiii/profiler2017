@@ -23,7 +23,9 @@ How to run:
 
 - Use your terminal to navigate to the root of a web server: 
 
+```ruby
 C:\xampp\htdocs
+```
 
 - Clone application by entering the following command to your terminal:
 
